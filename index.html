@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram feed</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div data-is data-is-api="assets/plugins/instagram-feed/instashow/api/index.php" data-is-source="@eastmovin"
+                data-is-layout="grid" data-is-width="auto"
+                data-is-responsive='{ "600": { "columns": 4, "rows": 2, "gutter": 5 }}' data-is-limit="8"
+                data-is-lang="en" data-is-widget-title="Ikuti Instagram Kami" data-is-image-click-action="instagram">
+            </div>
+            <div class="my-instashow"></div>
+        </div>
+    </div>
+
+
+
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="instagram-feed/instashow/elfsight-instagram-feed.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("appReady.EappsInstagramFeed", function () {
+            $(".my-instashow").eappsInstagramFeed({
+                api: "assets/plugins/instagram-feed/instashow/api/index.php",
+                source: "@eastmovin",
+                width: "auto",
+                layout: "grid",
+                lang: "en",
+            });
+        });
+    </script>
+</body>
+
+</html>
